@@ -3,7 +3,7 @@ let secondNumber = Number(prompt('Enter the second number:'));
 let operation = prompt('What operation do you need to perform on the numbers?');
 let result;
 
-if (isNaN(firstNumber) && isNaN(secondNumber)) {
+if (isNaN(firstNumber) || isNaN(secondNumber)) {
     alert(`You didn't enter the numbers!`);
 }
 else {

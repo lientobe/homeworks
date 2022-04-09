@@ -1,19 +1,30 @@
-let initialNumber = Number(prompt('Enter any number:'));
+let firstNumber = Number(prompt('Enter the first number:'));
+let secondNumber = Number(prompt('Enter the second number:'));
+let operation = prompt('What operation do you need to perform on the numbers?');
+let result;
 
-if (isNaN(initialNumber)) {
-    alert('Please enter a valid number!');
+if (isNaN(firstNumber) || isNaN(secondNumber)) {
+    alert(`You didn't enter the numbers!`);
 }
 else {
-    for (;;) {
-
-        const request = prompt('Enter "continue" if you do NOT want to display the increased number. Enter "break" if you want to break.');
-
-        if (request === 'break') break;
-
-        initialNumber++;
-
-        if (request === 'continue') continue;
-
-        alert(initialNumber);
+    if (operation === '+') {
+        result = firstNumber + secondNumber;
+        alert(`The sum of the numbers is ${result}`);
+    }
+    else if (operation === '-') {
+        result = firstNumber - secondNumber;
+        alert(`The difference of the numbers is ${result}`);
+    }
+    else if (operation === '*') {
+        result = firstNumber * secondNumber;
+        alert(`The product of the numbers is ${result}`);
+    }
+    else if (operation === '/') {
+        result = firstNumber / secondNumber;
+        alert(`The fraction of numbers is ${result}`);
+    }
+    else {
+        alert(`There is no such operation!`);
     }
 }
+

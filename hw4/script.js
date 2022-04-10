@@ -4,7 +4,7 @@ if (isNaN(initialNumber)) {
     alert('Please enter a valid number!');
 }
 else {
-    for (;;) {
+    while (true) {
 
         const request = prompt('Enter "continue" if you do NOT want to display the increased number. Enter "break" if you want to break.');
 
